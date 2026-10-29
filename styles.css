@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+/* Global styles */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px; /* Adjust font size for readability */
+    text-align: center;
+}
+
+/* Full viewport height for header and #home */
+header,
+#home {
+    /*  height: 100vh;Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Ensure text is readable */
+}
+
+
+
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 20px 15px;
+    padding: 20px 0;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hamburger menu toggle */
+#menuToggle {
+    display: none; /* Hide hamburger menu on large screens */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+}
+
+/* Navigation menu (desktop) */
+#menu {
+    display: flex; /* Show menu on larger screens */
+    flex-direction: row; /* Horizontal layout */
+    background-color: transparent; /* Transparent for desktop */
+    position: static; /* Inline with the rest of the content */
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+}
+
+#menu li {
+    text-align: left;
+    margin: 0 15px; /* Add spacing between items */
+}
+
+/* Main content area */
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow main content to grow and push footer down */
+    padding: 0;
+}
+#welcome  {
+    margin: auto;
+    width: 80%;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+}
+#proj_title {
+    margin: auto;
+    width: 40%;
+}
+#proj_title img {
+    max-width: 100%; /* Ensure the image scales down if necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Blockquotes for Donate section */
+blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d21242;
+}
+
+/* Footer styles */
+footer {
+    margin-top: auto;
+    background-color: #f4f4f4;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Flex containers */
+.flex-container1 {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex-item {
+    margin: 10px;
+    width: 40%;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 700px) {
+    body {
+        font-size: 16px; /* Increase font size for readability */
+    }
+    header,
+    #home {
+        padding: 10px;
+    }
+
+    #home img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    #home h1 {
+        font-size: 1.8em; /* Adjust font size for smaller screens */
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items:baseline; /* Center align flex items */
+        justify-content: space-between;
+    }
+
+    .flex-container1 {
+        flex-direction: column-reverse; /* Stack in reverse order */
+    }
+
+    .flex-item h2 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .flex-item img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 20px; /* Adjust font size for readability */
+        text-align:left;
+        margin: 0 4px;
+        }
+
+    #menu {
+        display: none; /* Hide menu for small screens */
+        flex-direction: column; /* Stack menu items vertically */
+        background-color: #333; /* Add background for dropdown */
+        position: absolute;
+        top: 60px;
+        left: 10px; /* Align menu to the left */
+        width: 200px;
+        z-index: 1000;
+        padding: 10px 0; /* Add padding for dropdown appearance */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    }
+
+    #menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    header, #menuToggle {
+        display: block; /* Show hamburger button for small screens */
+        
+    }
+
+    #projects,
+    #donate {
+        margin-right: 20px; /* Add space between the button and the menu */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    }
+    #proj_title {
+        margin: auto;
+        width: 40%;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between; /* Align items to the left */
+        align-items: center;
+        padding: 20px;
+       
+    }
+   
+    
+    .flex-item {
+        margin:10% auto;
+        width: 100%;
+    }
+    button:hover {
+        background-color: #d21242;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    
+}
+
+.arabic-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.2em;
+    line-height: 1.8;
+    direction: rtl;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.islamic-quote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 4px solid #4CAF50;
+    background-color: #f9f9f9;
+}
+
+/* Update the fade-in class to include scroll-triggered animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+    will-change: opacity, transform; /* Optimize performance */
+}
+
+/* Add this new class that will be added when element is visible */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add missing hover states */
+nav ul li a:hover {
+    color: #d21242;
+}
+
+footer ul li a:hover {
+    color: #d21242;
+}
+
+/* Ensure fade animations work on mobile */
+@media (max-width: 700px) {
+    .fade-in {
+        transform: translateY(10px); /* Smaller transform distance for mobile */
+        transition: opacity 0.6s ease-in, transform 0.6s ease-in; /* Slightly faster animation */
+    }
+}
+
+/* Add this to disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}
